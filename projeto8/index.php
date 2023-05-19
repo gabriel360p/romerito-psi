@@ -38,7 +38,7 @@ function roteador($uri)
     
     
         case '/store': //página onde vai salvar os dados do usuário
-
+            
             if($_SERVER['REQUEST_METHOD']!='POST'){
                 include __DIR__.'/views/errors/403.php';
                 die();    
