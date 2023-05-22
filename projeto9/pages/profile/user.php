@@ -1,15 +1,3 @@
-<?php
-// session_start();
-
-// $name=$_POST['name'];
-// $password=$_POST['password'];
-// $email=$_POST['email'];
-
-// $_SESSION['user']="Nome: ".$name." Email: ".$email;
-
-// var_dump($_SESSION['user']);
-
-?>
 
 <!doctype html>
 <html lang="en">
@@ -26,12 +14,14 @@
 
 </head>
 
-<body>
+<body style="background-color: <?php echo $_COOKIE['color'] ?> ;">
   <header>
     <!-- place navbar here -->
   </header>
   <main>
-  <a class="btn btn-primary" href="/logout">Logout</a>
+    <?php //    echo $_SESSION['user'] ?>
+
+    <a class="btn btn-primary" href="/profile" role="button">Profile</a>
   </main>
   <footer>
     <!-- place footer here -->

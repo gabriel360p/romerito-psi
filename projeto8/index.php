@@ -43,8 +43,8 @@ function roteador($uri)
                 include __DIR__.'/views/errors/403.php';
                 die();    
             }else{
-                // include __DIR__.'/controllers/registerController.php';
-                include __DIR__.'/content/dashboard.php';
+                include __DIR__.'/controllers/registerController.php';
+                // include __DIR__.'/content/dashboard.php';
                 die();    
             }
     
@@ -52,17 +52,30 @@ function roteador($uri)
     
     
             case '/dashboard': //página pós cadastro
-                if($_SERVER['REQUEST_METHOD']!='GET'){
-                    include __DIR__.'/views/errors/403.php';
-                    die();    
+                if(isset($_COOKIE['loged'])){
+                    if($_SERVER['REQUEST_METHOD']!='GET'){
+                        include __DIR__.'/views/errors/403.php';
+                        die();    
+                    }else{
+                        include __DIR__.'/views/content/dashboard.php';
+                        die();    
+                    }
                 }else{
-                    include __DIR__.'/views/content/dashboard.php';
-                    die();    
+                    echo "U suario não autenticado";
                 }
                 
             break;
-    
-    
+                
+            
+            case '/logout': //página pós cadastro
+                
+
+                
+            break;
+                
+            
+
+
             // case '/home': //página inicial
             //     include __DIR__ .'/views/home.php';
             //     die();    

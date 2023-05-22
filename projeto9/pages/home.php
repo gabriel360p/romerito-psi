@@ -1,16 +1,3 @@
-<?php
-// session_start();
-
-// $name=$_POST['name'];
-// $password=$_POST['password'];
-// $email=$_POST['email'];
-
-// $_SESSION['user']="Nome: ".$name." Email: ".$email;
-
-// var_dump($_SESSION['user']);
-
-?>
-
 <!doctype html>
 <html lang="en">
 
@@ -31,7 +18,30 @@
     <!-- place navbar here -->
   </header>
   <main>
-  <a class="btn btn-primary" href="/logout">Logout</a>
+
+    <span class="display-3">
+        Teste de Sessões
+    </span>
+
+    <form action="/dashboard" method="POST">
+
+        <div class="mb-3">
+          <label for="" class="form-label">Color</label>
+          <input type="color"
+            class="form-control" name="color" id="" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Username</label>
+          <input type="text"
+            class="form-control" name="username" id="" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+        <button class="btn btn-outline-primary">Ok</button>
+    </form>
+
+    
   </main>
   <footer>
     <!-- place footer here -->
