@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Welcome</title>
+  <title>User</title>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,26 +15,27 @@
 
 <body>
   <header>
-    
     <div class="container text-center">
-        <h1 class="">Bem Vindo</h1>
-        <h5 class="border-bottom">Simple Market</h5>
-    </div>
-
+        <h1 class="">Simple Market</h1>
+        <h5 class="border-bottom">Olá novo usuário</h5>
+      </div>
   </header>
-
   <main>
+    <div class="container text-center">
+      <form action="/newsession" method="POST">
 
-<div class="container text-center mt-4">
-    <div class="btn-group">
-        <a class="btn btn-outline-primary" href="/create">Iniciar Sessão</a>
-        <a class="btn btn-outline-primary">Ver Produtos</a>
-        <a class="btn btn-outline-primary" href="/cart">Ver Carrinho</a>
+        <div class="mb-3">
+          <label for="" class="form-label">Nome</label>
+          <input type="text"
+            class="form-control" name="name" id="" aria-describedby="helpId" placeholder="">
+          <small id="helpId" class="form-text text-muted">Help text</small>
+        </div>
+
+        <button class="btn btn-outline-primary">Continuar</button>
+
+      </form>
     </div>
-</div>
-
-</main>
-
+  </main>
   <footer>
     <!-- place footer here -->
   </footer>
