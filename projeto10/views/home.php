@@ -28,7 +28,7 @@
 <div class="container text-center mt-4">
     <div class="btn-group">
         <a class="btn btn-outline-primary" href="/create">Iniciar Sessão</a>
-        <a class="btn btn-outline-primary">Ver Produtos</a>
+        <a class="btn btn-outline-primary" href="/products">Ver Produtos</a>
         <a class="btn btn-outline-primary" href="/cart">Ver Carrinho</a>
     </div>
 </div>

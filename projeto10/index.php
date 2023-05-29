@@ -21,12 +21,7 @@ if($method=='POST'){
 
         case '/newsession':
 
-            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
-                include __DIR__.'/sessions.php';
-            }else{
-                include __DIR__.'/views/user/create.php';
-                break;
-            }
+            include __DIR__.'/sessions.php';
 
             break;
 
