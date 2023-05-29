@@ -9,14 +9,34 @@ if($method=='POST'){
 
     switch($uri){
         case '/store':
-            include __DIR__.'/store';
+
+            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
+                include __DIR__.'/store';
+            }else{
+                include __DIR__.'/views/user/create.php';
+                break;
+            }
+
             break;
 
         case '/newsession':
-            include __DIR__.'/sessions.php';
+
+            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
+                include __DIR__.'/sessions.php';
+            }else{
+                include __DIR__.'/views/user/create.php';
+                break;
+            }
+
             break;
 
         case '/logout':
+            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
+                include __DIR__.'/logout.php';
+            }else{
+                include __DIR__.'/views/user/create.php';
+                break;
+            }
 
             break;
 
