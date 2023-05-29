@@ -5,15 +5,26 @@ session_start();
 $uri = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];
 
-if($method=='POST'){
+if ($method == 'POST') {
 
-    switch($uri){
+    switch ($uri) {
         case '/store':
 
-            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
-                include __DIR__.'/store';
-            }else{
-                include __DIR__.'/views/user/create.php';
+            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
+                include __DIR__ . '/store';
+            } else {
+                include __DIR__ . '/views/user/create.php';
+                break;
+            }
+
+            break;
+
+        case '/storep':
+
+            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
+                include __DIR__ . '/storep.php';
+            } else {
+                include __DIR__ . '/views/user/create.php';
                 break;
             }
 
@@ -21,56 +32,59 @@ if($method=='POST'){
 
         case '/newsession':
 
-            include __DIR__.'/sessions.php';
+            include __DIR__ . '/sessions.php';
 
             break;
 
         case '/logout':
-            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
-                include __DIR__.'/logout.php';
-            }else{
-                include __DIR__.'/views/user/create.php';
+            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
+                include __DIR__ . '/logout.php';
+            } else {
+                include __DIR__ . '/views/user/create.php';
                 break;
             }
 
             break;
-
     }
+} else if ($method == 'GET') {
 
-}else if($method=='GET'){
-    
-    switch($uri){
+    switch ($uri) {
         case '/':
-            include __DIR__.'/views/home.php';
+            include __DIR__ . '/views/home.php';
             break;
 
         case '/create':
-            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
+            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
                 header('Location:/');
-            }else{
-                include __DIR__.'/views/user/create.php';
+            } else {
+                include __DIR__ . '/views/user/create.php';
+                break;
+            }
+
+        case '/createp':
+            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
+                include __DIR__ . '/views/products/createp.php';
+                die();
+            } else {
+                header('Location:/');
                 break;
             }
 
         case '/products':
-            include __DIR__.'/views/products/home.php';
+            include __DIR__ . '/views/products/home.php';
             break;
 
         case '/cart':
-            if(isset($_SESSION['user'])){//verificando se a sessão ja foi iniciada
-                include __DIR__.'/views/cart/home.php';
-            }else{
-                include __DIR__.'/views/user/create.php';
+            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
+                include __DIR__ . '/views/cart/home.php';
+            } else {
+                include __DIR__ . '/views/user/create.php';
                 break;
             }
 
 
-        break;
+            break;
     }
-
-}else{
+} else {
     header('Location:/');
 }
-
-
-?>
