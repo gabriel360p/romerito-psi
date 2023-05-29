@@ -25,6 +25,18 @@
   <main>
 
     <div class="container text-center mt-4">
+      <div class="row">
+        <div class="col justify-content-center mb-3">
+          <?php
+          if (isset($_SESSION['user'])) {
+            echo "<span class='badge bg-primary'>Sessão Iniciada, bem vindo " . $_SESSION['user'] . "</span>";
+          } else {
+            echo "<span class='badge bg-warning'>Sessão não Iniciada ";
+          }
+          ?>
+        </div>
+      </div>
+
       <div class="btn-group">
         <a class="btn btn-outline-primary" href="/create">Iniciar Sessão</a>
         <a class="btn btn-outline-primary" href="/products">Ver Produtos</a>
