@@ -46,14 +46,6 @@
           }
 
 
-          // echo "<br>";
-          // echo "Preço do produto: " . $row['price'];
-          // echo "<br>";
-          // echo "Descrição do Produto: " . $row['description'];
-          // echo "<br>";
-
-          // echo "<a  class='btn btn-outline-primary' href='storec.php?id=" . $row['rowid'] . "'>+ carrinho</a>";
-
           echo "<hr>";
         }
         ?>

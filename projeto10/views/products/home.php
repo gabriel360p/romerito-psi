@@ -26,6 +26,8 @@
         <div class="container text-center mt-4">
           <div class="btn-group">
             <a class="btn btn-outline-primary" href="/createp">Adicionar Produto</a>
+            <a class="btn btn-outline-primary" href="/logout">Logout</a>
+            <a class="btn btn-outline-primary" href="/cart">Carrinho</a>
             <a class="btn btn-outline-primary" href="/">Home</a>
           </div>
         </div>

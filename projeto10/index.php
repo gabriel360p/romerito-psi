@@ -48,20 +48,19 @@ if ($method == 'POST') {
             include __DIR__ . '/sessions.php';
 
             break;
-
-        case '/logout':
-            if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
-                include __DIR__ . '/logout.php';
-            } else {
-                include __DIR__ . '/views/user/create.php';
-                break;
-            }
-
-            break;
     }
 } else if ($method == 'GET') {
 
     switch ($uri) {
+        case '/logout':
+            include __DIR__ . '/logout.php';
+
+            // if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
+            // } else {
+            //     include __DIR__ . '/views/user/create.php';
+            //     break;
+            // }
+            break;
         case '/':
             include __DIR__ . '/views/home.php';
             break;

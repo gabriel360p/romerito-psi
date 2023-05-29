@@ -41,6 +41,7 @@
         <a class="btn btn-outline-primary" href="/create">Iniciar Sessão</a>
         <a class="btn btn-outline-primary" href="/products">Ver Produtos</a>
         <a class="btn btn-outline-primary" href="/cart">Ver Carrinho</a>
+        <a class="btn btn-outline-primary" href="/logout">Logout</a>
       </div>
     </div>
 
