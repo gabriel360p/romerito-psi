@@ -19,7 +19,20 @@ if ($method == 'POST') {
 
             break;
 
-        case '/storep':
+
+
+        case '/storec':
+
+            if (isset($_SESSION['user'])) { //adicionar no carrinho
+                include __DIR__ . '/storec.php';
+            } else {
+                include __DIR__ . '/views/user/create.php';
+                break;
+            }
+
+            break;
+
+        case '/storep': //guardar um novo produto
 
             if (isset($_SESSION['user'])) { //verificando se a sessão ja foi iniciada
                 include __DIR__ . '/storep.php';

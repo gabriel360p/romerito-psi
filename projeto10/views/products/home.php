@@ -31,23 +31,27 @@
       </div>
 
       <div class="row">
-        <?php
-        include 'banco.php';
-        $sql = "SELECT rowid, * FROM products";
-        $query = $db->query($sql);
+        <div class="container mt-4 w-50 text-start">
 
-        while ($row = $query->fetchArray()) {
-          echo $row['name'];
-          echo "<br>";
-          echo $row['price'];
-          echo "<br>";
-          echo $row['description'];
-          echo "<br>";
-          echo "<hr>";
-        }
+          <?php
+          include 'banco.php';
+          $sql = "SELECT rowid, * FROM products";
+          $query = $db->query($sql);
 
+          while ($row = $query->fetchArray()) {
 
-        ?>
+            echo "Nome do produto: " . $row['name'];
+            echo "<br>";
+            echo "Preço do produto: " . $row['price'];
+            echo "<br>";
+            echo "Descrição do Produto: " . $row['description'];
+            echo "<br>";
+            // echo "<a class='btn btn-outline-primary'> href='edit.php?id=" . $row['rowid'] . "'>+ carrinho</a>";
+
+            echo "<hr>";
+          }
+          ?>
+        </div>
       </div>
     </div>
 
