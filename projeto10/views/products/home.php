@@ -32,7 +32,6 @@
 
       <div class="row">
         <div class="container mt-4 w-50 text-start">
-
           <?php
           include 'banco.php';
           $sql = "SELECT rowid, * FROM products";
@@ -46,7 +45,6 @@
             echo "<br>";
             echo "Descrição do Produto: " . $row['description'];
             echo "<br>";
-            // echo "<a class='btn btn-outline-primary'> href='edit.php?id=" . $row['rowid'] . "'>+ carrinho</a>";
 
             echo "<hr>";
           }
