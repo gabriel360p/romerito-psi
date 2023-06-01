@@ -14,7 +14,8 @@ class Produto{
 $produtos[] = $produto1 = new Produto('Banana leite',8,'banana');;
 $produtos[]= $produto2 = new Produto('Nescau',12,'Achocolatado em pó');
 $produtos[]= $produto3 = new Produto('Pipoca',3,'Pipoca de milho');
-$produtos[]= $produto4 = new Produto('Miojo',2,'Pipoca de milho');
+$produtos[]= $produto4 = new Produto('Miojo',2,'sla');
+$produtos[]= $produto5 = new Produto('Nsei',2000,'nsei nseinseinseinsei');
 
 ?>
 
