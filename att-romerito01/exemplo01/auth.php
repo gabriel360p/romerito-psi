@@ -24,10 +24,9 @@ function logout () : void {
 }
 
 function authUser(){
-    $connnection= connection();
+    $connection= connection();
     $sql = "SELECT * FROM users where id = ".$_SESSION['user']."";
-    // echo $sql;
-    $data = $connnection->query($sql);
+    $data = $connection->query($sql);
     $user=$data->fetchArray();
     return $user;
 }

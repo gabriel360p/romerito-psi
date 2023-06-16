@@ -49,7 +49,7 @@ $connection->exec("CREATE TABLE IF NOT EXISTS books(
     id INTEGER PRIMARY KEY NOT NULL,
     title TEXT,
     user INTEGER,
-    user_name INTEGER,
+    user_name TEXT,
     FOREIGN KEY(user) REFERENCES users(id))"
 );
 
