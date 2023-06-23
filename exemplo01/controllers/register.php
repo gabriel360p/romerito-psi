@@ -37,3 +37,4 @@ if (isset($_POST['name'], $_POST['email'], $_POST['password'])) {
     }
 
 }
+

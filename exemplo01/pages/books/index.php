@@ -31,17 +31,18 @@
             <div class="col">
 
                 <?php
-                    include __DIR__.'/database.php';//incluindo o arquivo e configurações do banco de dados
-                    $connection=connection();//pegando a conexão
-
+                    // include __DIR__.'/database.php';//incluindo o arquivo e configurações do banco de dados
+                    
                     $sql = "SELECT * FROM books";//escrita sql para pegar todos os livros do banco de dados
-
+                    
+                    
+                    $connection=connection();//pegando a conexão
                     $livros=$connection->query($sql); //consultando o banco de dados 
 
                     echo "<hr>";
 
                     while($row = $livros->fetchArray()){//listando os livros do banco
-                        echo "ID: ".$row['id']." -- Título: ".$row['title']." -- ID do Usuário: ".$row['user'];
+                        echo "ID: ".$row['id']." -- Título: ".$row['title'];
                         echo "<hr>";
                     }
                 ?>

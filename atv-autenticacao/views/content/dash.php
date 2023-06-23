@@ -81,10 +81,7 @@
               echo "<br>";
               echo "<hr>";
             }
-
-
-
-            // $data= find("SELECT * FROM user");
+ 
           ?>
         </div>
       <p>

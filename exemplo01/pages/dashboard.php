@@ -19,9 +19,9 @@
     <h1>Book Store - 
 
     <?php 
-        $result = find ("SELECT * FROM users where id='".$_SESSION['user']."'");//pesquisando o usuário no banco de dados
-        $data = $result->fetchArray();//efetuando a busca no banco de dados        
-        echo $data['name'];//imprimindo o nome do usuário
+        $user = new User(connection());
+        $nome = $user->findUser($_SESSION['user']);
+        echo $_SESSION['user'];
     ?>
     
     </h1>

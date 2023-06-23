@@ -14,15 +14,15 @@ $rotas = [
     '/' => '/pages/home.html',
     '/dashboard' => '/pages/dashboard.php',
     '/users/create' => '/pages/users/register.html',
-    '/users/store' => '/pages/users/register.php',
+    '/users/store' => '/controllers/register.php',
     '/users/login' => '/pages/users/login.html',
-    '/logout' => '/pages/users/logout.php',
-    '/login' => '/pages/users/login.php', 
+    '/logout' => '/controllers/logout.php',
+    '/login' => '/controllers/login.php', 
 
 
     
     '/books/create' => '/pages/books/create.html',
-    '/books/store' => '/pages/books/store.php',
+    '/books/store' => '/controllers/store.php',
     '/books/index' => '/pages/books/index.php',
 ];
 
