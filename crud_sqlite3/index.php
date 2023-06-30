@@ -33,6 +33,9 @@
 						<td>
 							<a href='edit.php?id=".$row['rowid']."'>Edit</a>
 							<a href='delete.php?id=".$row['rowid']."'>Delete</a>
+
+							<a href='edit.php?id=".$row['rowid']."'>Edit</a>
+
 						</td>
 					</tr>
 				";
