@@ -14,9 +14,9 @@ if (  isset($_POST['email'], $_POST['password'])  ) {
     //Ou os dados do usuário em um array,
     //ou o valor booleano FALSO
     $data = $user->find($email);   
-    
+
     if ($data && password_verify($_POST['password'], $data['password'])) {
-        $_SESSION['user'] = $data['name'];
+        $_SESSION['user'] = $data['email'];
         header('Location: /dashboard');
     } else {
         header('Location: /users/login');

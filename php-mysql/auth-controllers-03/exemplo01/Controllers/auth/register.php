@@ -23,18 +23,23 @@ if (isset($_POST['name'], $_POST['email'], $_POST['password'])) {
     
     //Ou os dados do usuário em um array,
     //ou o valor booleano FALSO
-    $data = $user->find($email);   
+    // $data = $user->find($email);   
+    $data = false;   
 
-    if ($data) {
-        $_SESSION['user'] = $data['name'];
+    
+    if ($data) {//verificando se já esta logado
+        
+        $_SESSION['user'] = $data['email'];
+        
         header('Location: /dashboard');
-    } else {
+        
+    } else {//caso não esteja ele faz o cadastro
+        $user->save($name, $email, $password);
+    
+        $_SESSION['user'] = $email;
 
-        $retorno = $user->save ($name, $email, $password);
-        // save("INSERT INTO users ('name', 'email', 'password') values('{$name}','{$email}','{$password}')");
-
-        $_SESSION['user'] = $name;
         header('Location: /dashboard');
+
     }
 
 }

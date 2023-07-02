@@ -8,4 +8,4 @@ function connection(){
     }catch(PDOException $e){
         return print($e);
     }
-}
+}   

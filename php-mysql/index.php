@@ -6,7 +6,7 @@ $pdo = connection();
 // $name = "gabriel";
 // $email = "ga@ga";
 // $password = "123";
-global $id; $id=3;$name; $name="KAIO";
+// global $id; $id=3;$name; $name="KAIO";
 
 
 

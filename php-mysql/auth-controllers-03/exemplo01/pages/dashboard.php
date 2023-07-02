@@ -17,6 +17,11 @@
     <h1>Book Store - <?= $_SESSION['user'] ?></h1>
 
     <a href="/logout">Sair</a>
+
+    <a href="/books/create">Adicionar Livro</a>
+
+    <a href="/books/index">Livros</a>
+
     
 </body>
 </html>

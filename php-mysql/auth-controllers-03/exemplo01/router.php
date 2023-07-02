@@ -12,9 +12,9 @@ $rotas = [
     '/logout' => '/Controllers/auth/logout.php',
     
 
-    '/books/create' => '',
-    '/books/store' => '',
-    '/books/index' => '',
+    '/books/create' => '/pages/books/create.html',
+    '/books/store' => '/Controllers/books/store.php',
+    '/books/index' => '/pages/books/index.php',
     
 ];
 
